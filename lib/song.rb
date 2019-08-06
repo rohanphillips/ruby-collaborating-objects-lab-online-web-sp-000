@@ -29,9 +29,8 @@ class Song
     info = filename.match(/\w*.*(?=[.])/).to_s
     songname = Song.get_info(info, "songname")
     newsong = Song.new(songname)
-    binding.pry
     newsong.artist = Artist.find_or_create_by_name(Song.get_info(info, "artist"))
-
+    #binding.pry
     newsong
   end
 
