@@ -5,8 +5,6 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-    collection =
-    binding.pry
     if @@all.any?{|n| n.name == name} == false
       @@all << self
     end
