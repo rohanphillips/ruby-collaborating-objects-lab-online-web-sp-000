@@ -12,12 +12,10 @@ class Artist
   end
 
   def add_song(song)
-    #song.artist = self
     @songs << song
   end
 
   def add_song_by_name(song)
-    #newsong = Song.new(song)
     binding.pry
     add_song(song)
   end
@@ -39,7 +37,6 @@ class Artist
   end
 
   def self.song_count
-    #binding.pry
     Song.all.size
   end
 
