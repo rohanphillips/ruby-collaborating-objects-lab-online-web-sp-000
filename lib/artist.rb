@@ -5,7 +5,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-    collection = @@all.include ? {|n| n.name == name}
+    collection = @@all.any?{|n| n.name == name}
     binding.pry
     if collection.size == 0
       @@all << self
