@@ -24,7 +24,7 @@ class Artist
     collection = @@all.select{|n| n.name == name}
     if collection.size == 0
       newartist = Artist.new(name)
-      @@all << newartist
+      #@@all << newartist
       return newartist
     end
     collection[0]
