@@ -5,6 +5,10 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+    collection = @@all.select{|n| n.name == name}
+    if collection.size == 0
+      @@all << self
+    end
   end
 
   def add_song(song)
