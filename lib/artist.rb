@@ -5,9 +5,9 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-    collection = @@all.any?{|n| n.name == name}
+    collection = 
     binding.pry
-    if collection.size == 0
+    if @@all.any?{|n| n.name == name} == false
       @@all << self
     end
   end
@@ -39,10 +39,6 @@ class Artist
 
   def self.song_count
     Song.all.size
-  end
-
-  def save
-    @@all << self
   end
 
   def self.all
